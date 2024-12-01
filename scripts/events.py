@@ -518,15 +518,12 @@ class Events:
             # Checking every moon has the effect giving older cats more chances to become a mediator
             _ = game.config["roles"]["become_mediator_chances"]
             if cat.status in _ and not int(random.random() * _[cat.status]):
-                game.cur_events_list.append(
-                    Single_Event(
-                        f"{cat.name} had chosen to use their skills and experience to help "
-                        f"solve the Clan's disagreements. A meeting is called, and they "
-                        f"become the Clan's newest mediator. ",
-                        "ceremony",
-                        cat.ID,
-                    )
-                )
+                random_cat = get_random_moon_cat(Cat, main_cat=cat)
+                handle_short_events.handle_event(event_type="misc",
+                                                 main_cat=cat,
+                                                 random_cat=random_cat,
+                                                 sub_type=["ceremony", "mediator"],
+                                                 freshkill_pile=game.clan.freshkill_pile)
                 cat.status_change("mediator")
 
     def get_moon_freshkill(self):
