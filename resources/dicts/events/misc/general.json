@@ -4302,17 +4302,6 @@
     }
   },
   {
-    "event_id": "gen_misc_ceremony_adultmediator1",
-    "location": ["any"],
-    "season": ["any"],
-    "sub_type": ["ceremony", "mediator"],
-    "event_text": "m_c had chosen to use their skills and experience to help solve the Clan's disagreements. A meeting is called, and they become the Clan's newest mediator.",
-    "m_c": {
-      "age": ["young adult", "adult", "senior adult", "senior"],
-      "status": ["warrior", "elder"]
-    }
-  },
-  {
     "event_id": "gen_misc_transition_from_female1",
     "location": ["any"],
     "season": ["any"],
