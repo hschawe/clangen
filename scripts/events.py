@@ -518,7 +518,7 @@ class Events:
             # Checking every moon has the effect giving older cats more chances to become a mediator
             _ = game.config["roles"]["become_mediator_chances"]
             if cat.status in _ and not int(random.random() * _[cat.status]):
-                self.ceremony(cat, "mediator", "overprepared")
+                self.ceremony(cat, "mediator", "life_experience")
 
     def get_moon_freshkill(self):
         """Adding auto freshkill for the current moon."""
